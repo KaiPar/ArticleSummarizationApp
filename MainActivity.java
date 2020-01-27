@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView summary = (TextView) findViewById(R.id.txtSummary);
         summary.setMovementMethod(new ScrollingMovementMethod());
         String article = txt.getText().toString();
-        String url ="http://192.168.43.140:5000/process_request?inp1=" + article;
+        String url ="http://192.168.43.140:5000/process_request?inp1=" + article; // The IP cof my server. Changes everytime. Yet to find solution.
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
