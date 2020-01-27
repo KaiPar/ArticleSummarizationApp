@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/summarizer_core"
+        android:textColor="#000000"
+        android:textSize="15pt" />
+
+    <EditText
+        android:id="@+id/txtArticle"
+        android:layout_width="354dp"
+        android:layout_height="291dp"
+        android:layout_below="@+id/text_home"
+        android:layout_alignLeft="@+id/text_home"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="@string/enter_article_here"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btnGen"
+        android:layout_width="wrap_content"
+        android:layout_height="57dp"
+        android:layout_below="@+id/txtArticle"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="16dp"
+        android:layout_alignLeft="@+id/text_home"
+        android:layout_marginTop="2pt"
+        android:layout_marginBottom="20dp"
+        android:onClick="getSummary"
+        android:text="@string/generate" />
+
+    <TextView
+        android:id="@+id/txtSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/btnGen"
+        android:layout_alignLeft="@+id/btnGen"
+        android:textColor="#000000"
+        android:text="@string/summary" />
+
+
+</RelativeLayout>
